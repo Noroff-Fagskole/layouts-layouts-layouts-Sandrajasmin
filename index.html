@@ -11,6 +11,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/style.css" />
     <title>Dustin Home | Product detail page</title>
   </head>
@@ -76,8 +79,8 @@
           </nav>
         </div>
         <div class="row">
-          <form class="searchform" action="#" method="post">
-            <input type="search" id="search" name="search" />
+          <form class="search-form" action="#" method="post">
+            <input placeholder="Search for products" type="search" id="search" name="search" />
             <button type="submit">Submit</button>
           </form>
         </div>
@@ -85,8 +88,60 @@
     </header>
     <main class="app-body">
       <div class="container">
-        <nav class="bread-crumb">Bread crumb</nav>
-        <section class="product-container">product container</section>
+        <nav class="bread-crumb">
+          <ol class="bread-crumb-list">
+            <li><a href="https://www.dustinhome.no">Home</a></li>
+            <li>
+              <a href="https://www.dustinhome.no/group/hardware">Produkter</a>
+            </li>
+            <li>
+              <a href="https://www.dustinhome.no/group/hardware/lyd-bilde"
+                >Lyd &amp; bilde</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.dustinhome.no/group/hardware/lyd-bilde/foto-og-video"
+                >Foto og video</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.dustinhome.no/group/hardware/lyd-bilde/foto-og-video/droner-og-tilbehor"
+                >Droner og tilbehør</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.dustinhome.no/group/hardware/lyd-bilde/foto-og-video/droner-og-tilbehor/droner"
+                >Droner</a
+              >
+            </li>
+            <li>DJI Mavic Mini Fly More Combo</li>
+          </ol>
+        </nav>
+        <section class="product-container">
+          <div class="product flex-it">
+            <div class="column">
+              <img src="/img/product1.jpeg" alt="product drone" />
+            </div>
+            <div class="column">Product type</div>
+          </div>
+          <nav class="product-nav">
+            <nav>
+                <ul>
+                    <li><a href="#">Beskrivelse</a></li>
+                    <li><a href="#">Spesifikasjon</a></li>
+                    <li><a href="#">Tilbehør</a></li>
+                    <li><a href="#">Anmeldelser (0)</a></li>
+                </ul>
+            </nav>
+          </nav>
+          <div class="product-description flex-it">
+            <div class="column">Description left</div>
+            <div class="column">Description right</div>
+          </div>
+        </section>
       </div>
     </main>
     <footer class="app-footer">

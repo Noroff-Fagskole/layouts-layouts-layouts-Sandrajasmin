@@ -1,3 +1,4 @@
+
 :root {
   --brand-dark-grey: #f0f0f0;
   --brand-light-grey: #f6f6f6;
@@ -6,10 +7,20 @@
   --brand-black: #000;
   --brand-red: #ff5b5a;
   --container-width: 1170px;
+  --gutter: 20px;
+  --gutter-sml: 10px;
+  --default-font-family: 'Open Sans', sans-serif;
+
 }
+
 
 body {
   background-color: var(--brand-white);
+  font-family: var(--default-font-family);
+}
+
+img{
+    width: 100%;
 }
 
 .container {
@@ -19,11 +30,22 @@ body {
 
 .app-header {
   background-color: var(--brand-light-grey);
+  padding-top: var(--gutter);
+}
+
+.app-header .row:nth-child(1),
+.app-header .row:nth-child(2) {
+    padding-bottom: var(--gutter);
+}
+
+.app-header .row:nth-child(3){
+    padding: var(--gutter-sml);
 }
 
 .flex-it {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 a:link,
@@ -32,13 +54,35 @@ a:visited {
   text-decoration: none;
 }
 
+.product.flex-it {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product.flex-it .column,
+.product-description.flex-it .column{
+    flex-basis: 50%;
+}
+
+.product-description .column{
+    min-height: 444px;
+}
+
+.product-description .column:nth-child(2) {
+    background-color: var(--brand-turquoise);
+}
+
 .account-nav li,
-.main-navigation li {
+.main-navigation li,
+.bread-crumb li,
+.product-nav li{
   display: inline-block;
 }
 
 .account-nav ul,
-.main-navigation ul {
+.main-navigation ul, 
+.bread-crumb-list ol,
+.product-nav ul {
   list-style: none;
 }
 
@@ -50,6 +94,54 @@ a:visited {
   background-color: var(--brand-white);
 }
 
+.bread-crumb{
+    padding: var(--gutter);
+
+}
+
+
+
+.bread-crumb li:after {
+    content: '>';
+    padding-left: var(--gutter-sml);
+    padding-right: var(--gutter-sml);
+}
+
+.bread-crumb li:last-child:after{
+    content: '';
+}
+
+.product .column:nth-child(2){
+    background-color: var(--brand-turquoise);
+}
+
 .app-footer {
   background-color: var(--brand-black);
+}
+
+.search-form {
+    position: relative;
+}
+
+.search-form label{
+    display: none;
+}
+
+.search-form input {
+    width: 100%;
+    padding: var(--gutter-sml);
+    padding-left: 90px;
+    border: 1px solid var(--brand-dark-grey);
+}
+
+.search-form button {
+    position: absolute;
+    top: var(--gutter-sml);
+    left: var(--gutter-sml);
+}
+
+@media screen and (min-width: 768px) {
+    .flex-it {
+        flex-direction: row;
+      }
 }
